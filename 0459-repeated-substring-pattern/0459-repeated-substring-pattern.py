@@ -2,6 +2,7 @@ class Solution:
     def repeatedSubstringPattern(self, s: str) -> bool:
         lenString = len(s)
         for i in range(1,lenString//2 +1):
-            if lenString % len(s[:i]) == 0:
-                if s[:i] * (lenString//len(s[:i])) == s:
+            subString = s[:i]
+            if lenString % len(subString) == 0:
+                if subString * (lenString//len(subString)) == s:
                     return True
