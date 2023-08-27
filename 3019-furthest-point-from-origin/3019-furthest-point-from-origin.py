@@ -14,8 +14,5 @@ class Solution:
             else:
                 c2 -= 1
                 
-        if abs(c1) > abs(c2) :
-            return abs(c1)
-        else :
-            return abs(c2)
+        return max(abs(c1),abs(c2))
         
